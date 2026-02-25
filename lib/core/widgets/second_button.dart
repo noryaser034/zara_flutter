@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/styles/text_style.dart';
 
-class MainButton extends StatelessWidget {
-  const MainButton({super.key, required this.text, required this.onpress});
+class SecondButton extends StatelessWidget {
+  const SecondButton({super.key, required this.text, required this.onpress});
   final String text;
   final Function() onpress;
   @override
@@ -11,7 +11,7 @@ class MainButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primary,
-        minimumSize: Size(double.infinity, 60),
+        minimumSize: Size(185, 60),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
       ),
       onPressed: onpress,

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/widgets/custom_card.dart';
 import 'package:zara/core/widgets/main_button.dart';
+import 'package:zara/features/check_out/check_out_view.dart';
 
 class CartBody extends StatelessWidget {
   const CartBody({super.key, this.couponeController});
@@ -48,17 +50,38 @@ class CartBody extends StatelessWidget {
                         ),
                       ),
                     ),
-                    CustomCard(),
+                    CustomCard(
+                      image: Image.asset('assets/images/Rectangle 8-1.png'),
+                      title: "Men's Harrington Jacket",
+                      price: 148.0,
+                      size: "M",
+                      color: "Lemon",
+                    ),
                     SizedBox(height: 8),
-                    CustomCard(),
+                    CustomCard(
+                      image: Image.asset('assets/images/Rectangle 8-1.png'),
+                      title: "Men's Harrington Jacket",
+                      price: 148.0,
+                      size: "M",
+                      color: "Lemon",
+                    ),
                     SizedBox(height: 8),
-                    CustomCard(),
+                    CustomCard(
+                      image: Image.asset('assets/images/Rectangle 8-1.png'),
+                      title: "Men's Harrington Jacket",
+                      price: 148.0,
+                      size: "M",
+                      color: "Lemon",
+                    ),
                     SizedBox(height: 8),
-                    CustomCard(),
+                    CustomCard(
+                      image: Image.asset('assets/images/Rectangle 8-1.png'),
+                      title: "Men's Harrington Jacket",
+                      price: 148.0,
+                      size: "M",
+                      color: "Lemon",
+                    ),
                     SizedBox(height: 8),
-                    CustomCard(),
-                    SizedBox(height: 8),
-                    CustomCard(),
                   ],
                 ),
               ),
@@ -132,14 +155,16 @@ class CartBody extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              // CustomRBtnSmall(
-                              //   icon: (Icons.arrow_forward_ios_outlined),
-                              //   ontap: () {},
                             ),
                           ),
                         ),
 
-                        MainButton(text: "Checkout", onpress: () {}),
+                        MainButton(
+                          text: "Checkout",
+                          onpress: () {
+                            pushTo(context, CheckOutView());
+                          },
+                        ),
                       ],
                     ),
                   ],
