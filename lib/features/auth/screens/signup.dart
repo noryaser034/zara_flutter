@@ -34,7 +34,7 @@ class _SignupState extends State<Signup> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 123),
-                  Text("Sign Up", style: TextStyles.title),
+                  Text("Sign in", style: TextStyles.title),
                   const SizedBox(height: 16),
 
                   CustomTextFormField(
