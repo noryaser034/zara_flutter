@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/text_style.dart';
 import 'package:zara/core/widgets/main_button.dart';
-import 'package:zara/features/home/widgets/drop_down_container.dart';
+import 'package:zara/core/widgets/drop_down_container.dart';
 import 'package:zara/features/home/widgets/gender_toggle.dart';
 import 'package:zara/features/main/main_app_screen.dart';
 
@@ -61,6 +61,8 @@ class _AboutScreenState extends State<AboutScreen> {
                   selectedValue = value;
                 });
               },
+              items: ['18-25', '26-35', '36-45', '46-60'],
+              hint: 'Age Range',
             ),
           ],
         ),

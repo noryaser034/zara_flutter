@@ -11,11 +11,15 @@ abstract class AppImages {
   static const String blackManTraining = 'assets/images/BlackManTraining.png';
   static const String blackHoodies = 'assets/images/blackHoodies.png';
   static const String greenTraining = 'assets/images/greenTraining.png';
-  static const String oilJacket = 'assets/images/OilJacket.png';
+  static const String oilJacket = 'assets/images/oilJacket.png';
+  static const String skateJacket = 'assets/images/skateJacket.png';
   static const String pumbJacket = 'assets/images/PumbJacket.png';
-  static const String purbleHoodie = 'assets/images/PurbleHoodie.png';
+  static const String circleImage = 'assets/images/circleImage.png';
+  static const String purbleHoodie = 'assets/images/purbleHoodie.png';
+  static const String slipper = 'assets/images/slipper.png';
   static const String sentEmail = 'assets/images/sent_email.png';
-  static const String shoes = 'assets/images/shoes.png';
+  static const String shoes = 'assets/images/Shoes.png';
+  static const String shorts = 'assets/images/Shorts.png';
   static const String whiteJacket = 'assets/images/whiteJacket.png';
   static const String yellowHoodies = 'assets/images/yellowHoodies.png';
   static const String arrowBack = 'assets/icons/arrow_back.png';
@@ -30,4 +34,5 @@ abstract class AppImages {
   static const String order = 'assets/icons/order.png';
   static const String profile = 'assets/icons/profile.png';
   static const String search = 'assets/icons/search.png';
+  static const String bagIcon = 'assets/icons/bagIcon.png';
 }

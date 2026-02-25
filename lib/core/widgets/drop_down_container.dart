@@ -7,14 +7,20 @@ class DropDownContainer extends StatelessWidget {
     super.key,
     required this.selectedValue,
     required this.onChanged,
+    this.width,
+    required this.items,
+    required this.hint,
   });
 
   final String? selectedValue;
   final Function(String?) onChanged;
-
+  final double? width;
+  final List<String> items;
+  final String hint;
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: width,
       padding: EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
         color: AppColors.graycolor,
@@ -24,14 +30,11 @@ class DropDownContainer extends StatelessWidget {
         child: DropdownButton<String>(
           value: selectedValue,
           icon: Image.asset(AppImages.arrowDown),
-          hint: Text('Age Range'),
+          hint: Text(hint),
           isExpanded: true,
-          items: [
-            '18-25',
-            '26-35',
-            '36-45',
-            '46-60',
-          ].map((e) => DropdownMenuItem(value: e, child: Text(e))).toList(),
+          items: items
+              .map((e) => DropdownMenuItem(value: e, child: Text(e)))
+              .toList(),
           onChanged: onChanged,
         ),
       ),

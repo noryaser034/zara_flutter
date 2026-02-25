@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:zara/core/styles/app_theme.dart';
-import 'package:zara/features/main/main_app_screen.dart';
+import 'package:zara/features/auth/screens/sign_in_email.dart';
 
 class AppCore extends StatelessWidget {
   const AppCore({super.key});
@@ -17,7 +17,7 @@ class AppCore extends StatelessWidget {
           child: child ?? Container(),
         );
       },
-      home: const MainAppScreen(),
+      home: const Signin(),
       theme: AppTheme.lightTheme,
     );
   }

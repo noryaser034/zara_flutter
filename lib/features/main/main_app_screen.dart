@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zara/core/constants/app_image.dart';
 import 'package:zara/core/styles/color.dart';
+import 'package:zara/features/home/pages/home_screen.dart';
 
 class MainAppScreen extends StatefulWidget {
   const MainAppScreen({super.key});
@@ -12,7 +13,7 @@ class MainAppScreen extends StatefulWidget {
 class _MainAppScreenState extends State<MainAppScreen> {
   int currentIndex = 0;
   List<Widget> screens = [
-    Center(child: Text('home')),
+    HomeScreen(),
     Center(child: Text('notifications')),
     Center(child: Text('orders')),
     Center(child: Text('profile')),
@@ -22,7 +23,6 @@ class _MainAppScreenState extends State<MainAppScreen> {
     return Scaffold(
       body: screens[currentIndex],
       bottomNavigationBar: Container(
-        padding: EdgeInsets.only(top: 18, bottom: 22),
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
         child: BottomNavigationBar(
           onTap: (index) {
