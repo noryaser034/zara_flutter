@@ -6,8 +6,8 @@ import 'package:zara/core/styles/text_style.dart';
 import 'package:zara/core/widgets/custom_text_form.dart';
 import 'package:zara/core/widgets/main_button.dart';
 import 'package:zara/features/auth/screens/forgot_password.dart';
-import 'package:zara/features/auth/screens/signup.dart';
-import 'package:zara/features/auth/screens/signup_password.dart';
+import 'package:zara/features/auth/screens/sign_in_email.dart';
+import 'package:zara/features/auth/screens/sign_in_password.dart';
 import 'package:zara/features/auth/widgets/password_text_form_filed.dart';
 
 class CreateAccount extends StatefulWidget {
@@ -33,7 +33,7 @@ class _CreateAccountState extends State<CreateAccount> {
           child: GestureDetector(
             onTap: () {
               setState(() {
-                pushReplacement(context, const Signup());
+                pushReplacement(context, const Signin());
               });
             },
             child: Container(
@@ -121,7 +121,7 @@ class _CreateAccountState extends State<CreateAccount> {
                     onpress: () {
                       if (_formKey.currentState!.validate()) {
                         setState(() {
-                          pushReplacement(context, Signuppassword());
+                          pushReplacement(context, Signinpassword());
                         });
                       }
                     },

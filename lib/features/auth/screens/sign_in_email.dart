@@ -7,16 +7,16 @@ import 'package:zara/core/widgets/custom_text_form.dart';
 import 'package:zara/core/widgets/main_button.dart';
 import 'package:zara/core/widgets/social_button.dart';
 import 'package:zara/features/auth/screens/create_account.dart';
-import 'package:zara/features/auth/screens/signup_password.dart';
+import 'package:zara/features/auth/screens/sign_in_password.dart';
 
-class Signup extends StatefulWidget {
-  const Signup({super.key});
+class Signin extends StatefulWidget {
+  const Signin({super.key});
 
   @override
-  State<Signup> createState() => _SignupState();
+  State<Signin> createState() => _SigninState();
 }
 
-class _SignupState extends State<Signup> {
+class _SigninState extends State<Signin> {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -34,7 +34,7 @@ class _SignupState extends State<Signup> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 123),
-                  Text("Sign Up", style: TextStyles.title),
+                  Text("Sign in", style: TextStyles.title),
                   const SizedBox(height: 16),
 
                   CustomTextFormField(
@@ -57,7 +57,7 @@ class _SignupState extends State<Signup> {
                     onpress: () {
                       if (_formKey.currentState!.validate()) {
                         setState(() {
-                          pushReplacement(context, Signuppassword());
+                          pushTo(context, Signinpassword());
                         });
                       }
                     },

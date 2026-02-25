@@ -6,7 +6,7 @@ abstract class TextStyles {
     fontWeight: FontWeight.w700,
   );
   static const TextStyle subtitle = TextStyle(
-    fontSize: 14,
+    fontSize: 24,
     fontWeight: FontWeight.w600,
   );
 
