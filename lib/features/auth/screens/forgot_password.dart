@@ -5,8 +5,8 @@ import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/styles/text_style.dart';
 import 'package:zara/core/widgets/custom_text_form.dart';
 import 'package:zara/core/widgets/main_button.dart';
-import 'package:zara/features/auth/screens/signup.dart';
-import 'package:zara/features/auth/screens/signup_password.dart';
+import 'package:zara/features/auth/screens/resend_password.dart';
+import 'package:zara/features/auth/screens/sign_in_email.dart';
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});
@@ -31,7 +31,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           child: GestureDetector(
             onTap: () {
               setState(() {
-                pushReplacement(context, const Signup());
+                pushReplacement(context, const Signin());
               });
             },
             child: Container(
@@ -81,7 +81,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     onpress: () {
                       if (_formKey.currentState!.validate()) {
                         setState(() {
-                          pushReplacement(context, Signuppassword());
+                          pushReplacement(context, ResendPassword());
                         });
                       }
                     },

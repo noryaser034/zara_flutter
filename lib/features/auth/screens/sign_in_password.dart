@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:zara/core/functions/navigation.dart';
-import 'package:zara/core/functions/validation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/styles/text_style.dart';
-import 'package:zara/core/widgets/custom_text_form.dart';
 import 'package:zara/core/widgets/main_button.dart';
-import 'package:zara/core/widgets/social_button.dart';
-import 'package:zara/features/auth/screens/create_account.dart';
-import 'package:zara/features/auth/screens/signup_password.dart';
+import 'package:zara/features/auth/screens/forgot_password.dart';
+import 'package:zara/features/auth/widgets/password_text_form_filed.dart';
+import 'package:zara/features/home/pages/about_screen.dart';
 
-class Signup extends StatefulWidget {
-  const Signup({super.key});
+class Signinpassword extends StatefulWidget {
+  const Signinpassword({super.key});
 
   @override
-  State<Signup> createState() => _SignupState();
+  State<Signinpassword> createState() => _SigninpasswordState();
 }
 
-class _SignupState extends State<Signup> {
+class _SigninpasswordState extends State<Signinpassword> {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -34,17 +32,17 @@ class _SignupState extends State<Signup> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 123),
-                  Text("Sign Up", style: TextStyles.title),
+                  Text("Sign in", style: TextStyles.title),
                   const SizedBox(height: 16),
 
-                  CustomTextFormField(
-                    hintText: "Email Address",
-                    keyboardType: TextInputType.emailAddress,
+                  PasswordTextFormFiled(
+                    hintText: 'Password',
+                    keyboardType: TextInputType.visiblePassword,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter your email';
-                      } else if (!isEmailValid(value)) {
-                        return 'Please enter a valid email';
+                        return 'Please enter your password';
+                      } else if (value.length < 8) {
+                        return 'Password must be at least 8 characters';
                       }
                       return null;
                     },
@@ -57,7 +55,7 @@ class _SignupState extends State<Signup> {
                     onpress: () {
                       if (_formKey.currentState!.validate()) {
                         setState(() {
-                          pushReplacement(context, Signuppassword());
+                          pushReplacement(context, AboutScreen());
                         });
                       }
                     },
@@ -70,7 +68,7 @@ class _SignupState extends State<Signup> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const Text(
-                        "Dont have an Account ? ",
+                        "Forgot Password ? ",
                         style: TextStyle(
                           fontSize: 14,
                           color: AppColors.blackcolor,
@@ -80,7 +78,7 @@ class _SignupState extends State<Signup> {
                       TextButton(
                         onPressed: () {
                           setState(() {
-                            pushReplacement(context, CreateAccount());
+                            pushReplacement(context, ForgotPassword());
                           });
                         },
 
@@ -90,7 +88,7 @@ class _SignupState extends State<Signup> {
                           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         ),
                         child: Text(
-                          "Create One",
+                          "Reset",
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -102,42 +100,6 @@ class _SignupState extends State<Signup> {
                   ),
 
                   const SizedBox(height: 71),
-
-                  /// Apple Button
-                  SocialButton(
-                    imagePath: "assets/icons/apple.png",
-                    text: "Sign Up with Apple",
-                    onpress: () {
-                      setState(() {
-                        // pushReplacement(context, );
-                      });
-                    },
-                  ),
-                  const SizedBox(height: 16),
-
-                  /// Google Button
-                  SocialButton(
-                    imagePath: "assets/icons/google.png",
-                    text: "Sign Up with Facebook",
-                    onpress: () {
-                      setState(() {
-                        // pushReplacement(context, );
-                      });
-                    },
-                  ),
-
-                  const SizedBox(height: 16),
-
-                  /// Facebook Button
-                  SocialButton(
-                    imagePath: "assets/icons/facebook.png",
-                    text: "Sign Up with Facebook",
-                    onpress: () {
-                      setState(() {
-                        // pushReplacement(context, );
-                      });
-                    },
-                  ),
                 ],
               ),
             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
-import 'package:zara/features/auth/screens/signup.dart';
+import 'package:zara/features/auth/screens/sign_in_email.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // delay of 3 seconds before navigating to the next screen
     Future.delayed(const Duration(seconds: 3), () {
       setState(() {
-        pushReplacement(context, const Signup());
+        pushReplacement(context, const Signin());
       });
     });
   }
