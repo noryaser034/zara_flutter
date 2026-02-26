@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:zara/core/constants/app_fonts.dart';
+import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/widgets/main_button.dart';
+import 'package:zara/features/notifications/notifications_view.dart';
 
 class PlaceOrderBody extends StatelessWidget {
   const PlaceOrderBody({super.key});
@@ -9,14 +11,13 @@ class PlaceOrderBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(bottom: 30.0),
+      body: Container(
+        color: AppColors.primary,
         child: Column(
           children: [
             Expanded(
               flex: 3,
-              child: Container(
-                color: AppColors.primary,
+              child: SizedBox(
                 width: double.infinity,
                 child: Image.asset("assets/images/Order_Placed.png"),
               ),
@@ -24,8 +25,14 @@ class PlaceOrderBody extends StatelessWidget {
             Expanded(
               flex: 2,
               child: Container(
-                color: AppColors.background,
                 width: double.infinity,
+                decoration: BoxDecoration(
+                  color: AppColors.background,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25),
+                    topRight: Radius.circular(25),
+                  ),
+                ),
                 child: Stack(
                   children: <Widget>[
                     Positioned(
@@ -37,7 +44,7 @@ class PlaceOrderBody extends StatelessWidget {
                         child: Text(
                           'Order Placed Successfully',
                           style: TextStyle(
-                            fontSize: 32,
+                            fontSize: 33,
                             fontFamily: AppFonts.gabarito,
                             fontWeight: FontWeight.bold,
                           ),
@@ -63,8 +70,14 @@ class PlaceOrderBody extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(left: 10, right: 10),
-              child: MainButton(text: "See Order Details", onpress: () {}),
+              color: AppColors.background,
+              padding: EdgeInsets.only(left: 10, right: 10, bottom: 30),
+              child: MainButton(
+                text: "See Order Details",
+                onpress: () {
+                  pushTo(context, NotificationsView());
+                },
+              ),
             ),
           ],
         ),
