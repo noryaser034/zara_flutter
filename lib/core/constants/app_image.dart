@@ -22,6 +22,10 @@ abstract class AppImages {
   static const String shorts = 'assets/images/Shorts.png';
   static const String whiteJacket = 'assets/images/whiteJacket.png';
   static const String yellowHoodies = 'assets/images/yellowHoodies.png';
+  static const String nikeBag = 'assets/images/nikebag.png';
+  static const String nikefill = 'assets/images/nikefill.png';
+  static const String nikeshow = 'assets/images/nikeshow.png';
+  static const String niketshirt = 'assets/images/niketshirt.png';
   static const String arrowBack = 'assets/icons/arrow_back.png';
   static const String arrowDown = 'assets/icons/arrowdown.png';
   static const String arrowRight = 'assets/icons/arrowright2.png';
@@ -35,4 +39,5 @@ abstract class AppImages {
   static const String profile = 'assets/icons/profile.png';
   static const String search = 'assets/icons/search.png';
   static const String bagIcon = 'assets/icons/bagIcon.png';
+  
 }

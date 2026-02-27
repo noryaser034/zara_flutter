@@ -4,6 +4,7 @@ import 'package:zara/core/styles/color.dart';
 import 'package:zara/features/cart/cart_view.dart';
 import 'package:zara/features/home/pages/home_screen.dart';
 import 'package:zara/features/notifications/notifications_view.dart';
+import 'package:zara/features/profile/profile_view.dart';
 
 class MainAppScreen extends StatefulWidget {
   const MainAppScreen({super.key});
@@ -18,7 +19,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
     HomeScreen(),
     NotificationsView(),
     CartView(),
-    Center(child: Text('profile')),
+    ProfileView(),
   ];
   @override
   Widget build(BuildContext context) {
