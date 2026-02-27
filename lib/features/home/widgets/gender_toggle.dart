@@ -16,6 +16,7 @@ class GenderToggle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         MainButton(
           text: 'Men',
@@ -29,7 +30,7 @@ class GenderToggle extends StatelessWidget {
               ? AppColors.background
               : AppColors.blackcolor,
         ),
-        SizedBox(width: 20),
+        //SizedBox(width: 20),
         MainButton(
           text: 'Women',
           onpress: onWomenTap,

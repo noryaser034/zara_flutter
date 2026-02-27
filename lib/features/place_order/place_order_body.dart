@@ -3,7 +3,7 @@ import 'package:zara/core/constants/app_fonts.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/widgets/main_button.dart';
-import 'package:zara/features/notifications/notifications_view.dart';
+import 'package:zara/features/orders/order_view.dart';
 
 class PlaceOrderBody extends StatelessWidget {
   const PlaceOrderBody({super.key});
@@ -75,7 +75,7 @@ class PlaceOrderBody extends StatelessWidget {
               child: MainButton(
                 text: "See Order Details",
                 onpress: () {
-                  pushTo(context, NotificationsView());
+                  pushTo(context, OrderView());
                 },
               ),
             ),

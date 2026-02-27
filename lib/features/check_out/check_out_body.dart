@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/widgets/main_button.dart';
+import 'package:zara/features/cart/cart_view.dart';
 import 'package:zara/features/place_order/place_order_view.dart';
 
 class CheckOutBody extends StatelessWidget {
@@ -18,7 +19,9 @@ class CheckOutBody extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            popTo(context, CartView());
+          },
           icon: Icon(Icons.arrow_back_ios_new_outlined),
         ),
         centerTitle: true,
@@ -81,7 +84,7 @@ class CheckOutBody extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text("Subtotal", style: TextStyle(fontSize: 18)),
-                              Text("\$200", style: TextStyle(fontSize: 22)),
+                              Text("\$355", style: TextStyle(fontSize: 22)),
                             ],
                           ),
                           Row(
@@ -105,7 +108,7 @@ class CheckOutBody extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text("Total", style: TextStyle(fontSize: 18)),
-                              Text("\$208", style: TextStyle(fontSize: 22)),
+                              Text("\$363", style: TextStyle(fontSize: 22)),
                             ],
                           ),
                           SizedBox(height: 10),
@@ -115,9 +118,12 @@ class CheckOutBody extends StatelessWidget {
                   ),
                 ),
               ),
-              MainButton(text: "Place Order", onpress: () {
-                pushTo(context, PlaceOrderView());
-              }),
+              MainButton(
+                text: "Place Order",
+                onpress: () {
+                  pushTo(context, PlaceOrderView());
+                },
+              ),
             ],
           ),
         ),

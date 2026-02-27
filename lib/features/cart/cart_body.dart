@@ -3,6 +3,7 @@ import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/widgets/custom_card.dart';
 import 'package:zara/core/widgets/main_button.dart';
+import 'package:zara/features/cart/cart_view.dart';
 import 'package:zara/features/check_out/check_out_view.dart';
 
 class CartBody extends StatelessWidget {
@@ -15,7 +16,9 @@ class CartBody extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            popTo(context, CartView());
+          },
           icon: Icon(Icons.arrow_back_ios_new_outlined),
         ),
         centerTitle: true,
@@ -51,35 +54,35 @@ class CartBody extends StatelessWidget {
                       ),
                     ),
                     CustomCard(
-                      image: Image.asset('assets/images/Rectangle 8-1.png'),
+                      image: Image.asset('assets/images/oilJacket.png'),
                       title: "Men's Harrington Jacket",
-                      price: 148.0,
-                      size: "M",
-                      color: "Lemon",
+                      price: 90.0,
+                      size: "Size: M",
+                      color: "Color: Lemon",
                     ),
                     SizedBox(height: 8),
                     CustomCard(
-                      image: Image.asset('assets/images/Rectangle 8-1.png'),
-                      title: "Men's Harrington Jacket",
-                      price: 148.0,
-                      size: "M",
-                      color: "Lemon",
+                      image: Image.asset('assets/images/blackHoodies.png'),
+                      title: "Black Hoodies",
+                      price: 85.0,
+                      size: "Size: M",
+                      color: "Color: Black",
                     ),
                     SizedBox(height: 8),
                     CustomCard(
-                      image: Image.asset('assets/images/Rectangle 8-1.png'),
-                      title: "Men's Harrington Jacket",
-                      price: 148.0,
-                      size: "M",
-                      color: "Lemon",
+                      image: Image.asset('assets/images/skateJacket.png'),
+                      title: "Skate Jacket",
+                      price: 32.0,
+                      size: "Size: S",
+                      color: "Color: Lemon",
                     ),
                     SizedBox(height: 8),
                     CustomCard(
-                      image: Image.asset('assets/images/Rectangle 8-1.png'),
-                      title: "Men's Harrington Jacket",
+                      image: Image.asset('assets/images/PumbJacket.png'),
+                      title: "Pumb Jacket",
                       price: 148.0,
-                      size: "M",
-                      color: "Lemon",
+                      size: "Size: M",
+                      color: "Color: Black",
                     ),
                     SizedBox(height: 8),
                   ],
@@ -98,7 +101,7 @@ class CartBody extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text("Subtotal", style: TextStyle(fontSize: 18)),
-                            Text("\$200", style: TextStyle(fontSize: 22)),
+                            Text("\$355", style: TextStyle(fontSize: 22)),
                           ],
                         ),
                         Row(
@@ -122,7 +125,7 @@ class CartBody extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text("Total", style: TextStyle(fontSize: 18)),
-                            Text("\$208", style: TextStyle(fontSize: 22)),
+                            Text("\$363", style: TextStyle(fontSize: 22)),
                           ],
                         ),
                         SizedBox(height: 10),
