@@ -23,14 +23,9 @@ class MainButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-<<<<<<< HEAD
-        backgroundColor: AppColors.primary,
-        minimumSize: Size(double.infinity, 60),
-=======
         elevation: 0,
         backgroundColor: backgroundColor ?? AppColors.primary,
         minimumSize: Size(width ?? double.infinity, height ?? 70),
->>>>>>> e12e841ef758a8ae59161a9162bab7c95922ec03
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
       ),
       onPressed: onpress,
