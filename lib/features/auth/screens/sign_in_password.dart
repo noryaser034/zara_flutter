@@ -5,15 +5,16 @@ import 'package:zara/core/styles/text_style.dart';
 import 'package:zara/core/widgets/main_button.dart';
 import 'package:zara/features/auth/screens/forgot_password.dart';
 import 'package:zara/features/auth/widgets/password_text_form_filed.dart';
+import 'package:zara/features/home/pages/about_screen.dart';
 
-class Signuppassword extends StatefulWidget {
-  const Signuppassword({super.key});
+class Signinpassword extends StatefulWidget {
+  const Signinpassword({super.key});
 
   @override
-  State<Signuppassword> createState() => _SignuppasswordState();
+  State<Signinpassword> createState() => _SigninpasswordState();
 }
 
-class _SignuppasswordState extends State<Signuppassword> {
+class _SigninpasswordState extends State<Signinpassword> {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -54,7 +55,7 @@ class _SignuppasswordState extends State<Signuppassword> {
                     onpress: () {
                       if (_formKey.currentState!.validate()) {
                         setState(() {
-                          // pushReplacement(context, );
+                          pushReplacement(context, AboutScreen());
                         });
                       }
                     },
