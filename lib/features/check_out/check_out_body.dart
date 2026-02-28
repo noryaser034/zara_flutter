@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zara/core/functions/navigation.dart';
+import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/widgets/main_button.dart';
 import 'package:zara/features/cart/cart_view.dart';
 import 'package:zara/features/place_order/place_order_view.dart';
@@ -48,7 +49,7 @@ class CheckOutBody extends StatelessWidget {
                       TextField(
                         controller: shipAddressController,
                         decoration: InputDecoration(
-                          fillColor: Color(0xFFCAC7C7),
+                          fillColor: AppColors.graycolor,
                           filled: true,
 
                           border: InputBorder.none,
@@ -61,7 +62,7 @@ class CheckOutBody extends StatelessWidget {
                         controller: payMethodController,
                         decoration: InputDecoration(
                           border: InputBorder.none,
-                          fillColor: Color(0xFFCAC7C7),
+                          fillColor: AppColors.graycolor,
                           filled: true,
                           hintText: "Add Payment Method",
                           labelText: "Payment Method",

@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/widgets/custom_rounded_button.dart';
 
 class CustomCard extends StatelessWidget {
-  const CustomCard({super.key,
-  
-  this.image,
-  this.title,
-  this.price,
-  this.size,
-  this.color,
-  this.label,
-  this.hint,
+  const CustomCard({
+    super.key,
+
+    this.image,
+    this.title,
+    this.price,
+    this.size,
+    this.color,
+    this.label,
+    this.hint,
   });
 
   final Image? image;
@@ -25,7 +27,7 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       child: Card(
-        color: Color(0xFFD3D1D1),
+        color: AppColors.graycolor,
         elevation: 4,
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -37,8 +39,7 @@ class CustomCard extends StatelessWidget {
               ), //Icon(Icons.album),
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('$title'), Text("$price")],
+                children: [Text('$title'), Text("$price")],
               ),
               subtitle: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,9 +48,9 @@ class CustomCard extends StatelessWidget {
                   Text("$color"),
                   Row(
                     children: [
-                      CustomRoundedButton(icon: Icons.add, ontap: (){},),
+                      CustomRoundedButton(icon: Icons.add, ontap: () {}),
                       SizedBox(width: 5),
-                      CustomRoundedButton(icon: Icons.remove, ontap: (){},),
+                      CustomRoundedButton(icon: Icons.remove, ontap: () {}),
                     ],
                   ),
                 ],

@@ -15,6 +15,9 @@ class CartBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
+        backgroundColor: Colors.transparent,
+
         leading: IconButton(
           onPressed: () {
             popTo(context, CartView());
@@ -135,7 +138,7 @@ class CartBody extends StatelessWidget {
                           child: TextField(
                             controller: couponeController,
                             decoration: InputDecoration(
-                              fillColor: Color(0xFFCAC7C7),
+                              fillColor: AppColors.graycolor,
                               border: InputBorder.none,
                               filled: true,
                               prefixIcon: Image.asset(

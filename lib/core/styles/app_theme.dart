@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zara/core/styles/color.dart';
 
 class AppTheme {
   static ThemeData get lightTheme => ThemeData(
@@ -8,5 +9,6 @@ class AppTheme {
       showSelectedLabels: false,
       showUnselectedLabels: false,
     ),
+    scaffoldBackgroundColor: AppColors.background,
   );
 }
