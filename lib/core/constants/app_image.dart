@@ -6,7 +6,7 @@ abstract class AppImages {
   static const String bag = 'assets/images/Bag.png';
   static const String bell = 'assets/images/bell.png';
   static const String checkout = 'assets/images/check-out.png';
-  static const String hoodies = 'assets/images/hoodies.png';
+  static const String hoodies = 'assets/images/Hoodies.png';
   static const String orderPlaced = 'assets/images/Order_Placed.png';
   static const String blackManTraining = 'assets/images/BlackManTraining.png';
   static const String blackHoodies = 'assets/images/blackHoodies.png';
@@ -22,6 +22,10 @@ abstract class AppImages {
   static const String shorts = 'assets/images/Shorts.png';
   static const String whiteJacket = 'assets/images/whiteJacket.png';
   static const String yellowHoodies = 'assets/images/yellowHoodies.png';
+  static const String nikeBag = 'assets/images/nikebag.png';
+  static const String nikefill = 'assets/images/nikefill.png';
+  static const String nikeshow = 'assets/images/nikeshow.png';
+  static const String niketshirt = 'assets/images/niketshirt.png';
   static const String arrowBack = 'assets/icons/arrow_back.png';
   static const String arrowDown = 'assets/icons/arrowdown.png';
   static const String arrowRight = 'assets/icons/arrowright2.png';

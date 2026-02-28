@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zara/core/app_core/app_core.dart';
+import 'package:zara/features/intro/splash.dart';
 
 void main() {
   runApp(ZaraApp());
@@ -10,6 +10,9 @@ class ZaraApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppCore();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
+    );
   }
 }
