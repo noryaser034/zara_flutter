@@ -39,4 +39,7 @@ abstract class AppImages {
   static const String profile = 'assets/icons/profile.png';
   static const String search = 'assets/icons/search.png';
   static const String bagIcon = 'assets/icons/bagIcon.png';
+  static const String checkOut = 'assets/images/check-out.png';
+  static const String processingSvg = "assets/icons/order.svg";
+
 }
