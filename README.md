@@ -1,3 +1,7 @@
 # zara
 
-A new Flutter project.
+## 📸 Screenshots
+| Icon_App  | 
+|--------------|
+| ![Icon_App](screenshots/icon.png) | 
+
