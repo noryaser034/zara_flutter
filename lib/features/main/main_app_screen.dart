@@ -7,7 +7,8 @@ import 'package:zara/features/notifications/notifications_view.dart';
 import 'package:zara/features/profile/profile_view.dart';
 
 class MainAppScreen extends StatefulWidget {
-  const MainAppScreen({super.key, required bool isMenSelected});
+  final bool isMenSelected;
+  const MainAppScreen({super.key, this.isMenSelected = true});
 
   @override
   State<MainAppScreen> createState() => _MainAppScreenState();
@@ -15,8 +16,8 @@ class MainAppScreen extends StatefulWidget {
 
 class _MainAppScreenState extends State<MainAppScreen> {
   int currentIndex = 0;
-  static const List<Widget> screens = [
-    HomeScreen(),
+  List<Widget> get screens => [
+    HomeScreen(initialGender: widget.isMenSelected ? 'men' : 'women'),
     NotificationsView(),
     CartView(),
     ProfileView(),

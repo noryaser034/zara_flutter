@@ -17,13 +17,14 @@ class _WishListState extends State<WishList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         leading: IconButton(
           onPressed: () {
             popTo(context, ProfileView());
           },
           icon: Icon(Icons.arrow_back_ios_new_outlined),
         ),
-        title: Center(child: Text('Wishlist', style: TextStyles.title)),
+        title: Text('Wishlist', style: TextStyles.title),
       ),
       body: SizedBox(
         width: double.infinity,
