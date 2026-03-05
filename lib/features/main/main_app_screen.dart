@@ -7,7 +7,7 @@ import 'package:zara/features/notifications/notifications_view.dart';
 import 'package:zara/features/profile/profile_view.dart';
 
 class MainAppScreen extends StatefulWidget {
-  const MainAppScreen({super.key});
+  const MainAppScreen({super.key, required bool isMenSelected});
 
   @override
   State<MainAppScreen> createState() => _MainAppScreenState();

@@ -1,19 +1,19 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:zara/core/constants/app_image.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/styles/text_style.dart';
-import 'package:zara/core/widgets/custom_circular_container.dart';
 import 'package:zara/core/widgets/custom_text_form.dart';
 import 'package:zara/features/Search/widget/choos_botton.dart';
 import 'package:zara/features/Search/widget/filterCount.dart';
 import 'package:zara/features/Search/widget/filyer_product_by_name.dart';
 import 'package:zara/features/Search/widget/fliters.dart';
-import 'package:zara/features/Search/widget/fliters.dart';
 import 'package:zara/features/Search/widget/header_model_bottom.dart';
 import 'package:zara/features/Search/widget/on_sale.dart';
 import 'package:zara/features/home/data/product_model.dart';
-import 'package:zara/features/home/widgets/item_card.dart';
+import 'package:zara/features/home/pages/home_screen.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});
@@ -38,9 +38,17 @@ class _SearchState extends State<Search> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Image.asset(AppImages.arrowBack),
+          onPressed: () {
+            pushReplacement(context, const HomeScreen());
+          },
+        ),
         titleSpacing: 0,
-
         centerTitle: true,
+        surfaceTintColor: Colors.transparent,
+        backgroundColor: AppColors.background,
+
         title: Hero(
           tag: "search",
           child: Material(
@@ -72,7 +80,7 @@ class _SearchState extends State<Search> {
                   showModalBottomSheet(
                     backgroundColor: Colors.white,
                     context: context,
-                    builder: (Context) {
+                    builder: (context) {
                       return StatefulBuilder(
                         builder: (context, setModalState) {
                           return Padding(
@@ -122,7 +130,7 @@ class _SearchState extends State<Search> {
                   showModalBottomSheet(
                     backgroundColor: Colors.white,
                     context: context,
-                    builder: (Context) {
+                    builder: (context) {
                       return Padding(
                         padding: const EdgeInsets.all(20),
                         child: Column(
@@ -151,7 +159,7 @@ class _SearchState extends State<Search> {
                   showModalBottomSheet(
                     backgroundColor: Colors.white,
                     context: context,
-                    builder: (Context) {
+                    builder: (context) {
                       return StatefulBuilder(
                         builder: (context, setModalState) {
                           return Padding(
@@ -224,7 +232,7 @@ class _SearchState extends State<Search> {
                   showModalBottomSheet(
                     backgroundColor: Colors.white,
                     context: context,
-                    builder: (Context) {
+                    builder: (context) {
                       return StatefulBuilder(
                         builder: (context, setModalState) {
                           return Padding(

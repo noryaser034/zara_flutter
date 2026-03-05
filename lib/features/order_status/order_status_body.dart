@@ -114,7 +114,10 @@ class _OrderStatusBodyState extends State<OrderStatusBody> {
               child: SecondButton(
                 text: "Explore Categories",
                 onpress: () {
-                  pushReplacement(context, MainAppScreen());
+                  pushReplacement(
+                    context,
+                    const MainAppScreen(isMenSelected: true),
+                  );
                 },
               ),
             ),

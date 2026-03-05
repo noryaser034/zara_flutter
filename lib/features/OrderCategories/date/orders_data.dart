@@ -1,7 +1,9 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 
-class aOrdersModel {
-  aOrdersModel({
+class OrdersModel {
+  OrdersModel({
     
   required this.NumberOrder, required this.NumberItem, required this.tageKey});
 
@@ -11,21 +13,21 @@ class aOrdersModel {
 
 }
 
-List<aOrdersModel> openorders = [
-  aOrdersModel(
+List<OrdersModel> openorders = [
+  OrdersModel(
     tageKey: UniqueKey().toString(),
     NumberOrder: "Order  #456765",
     NumberItem: "4 items",
 
    ),
 
-  aOrdersModel(
+  OrdersModel(
     tageKey: UniqueKey().toString(),
     NumberOrder: "Order  #454569",
     NumberItem: "2 items",
   ),
 
-  aOrdersModel(
+  OrdersModel(
     tageKey: UniqueKey().toString(),
     NumberOrder: "Order  #454809",
     NumberItem: "1 items",

@@ -3,7 +3,6 @@ import 'package:zara/core/constants/app_fonts.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/widgets/second_button.dart';
 import 'package:zara/features/OrderCategories/Tabe_Orders/Tabe_Categories_Viwe.dart';
-import 'package:zara/features/order_status/order_status_view.dart';
 
 class OrderBody extends StatelessWidget {
   const OrderBody({super.key});

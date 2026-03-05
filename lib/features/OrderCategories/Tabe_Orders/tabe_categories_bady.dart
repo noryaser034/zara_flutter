@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:zara/core/functions/navigation.dart';
@@ -7,9 +9,7 @@ import 'package:zara/features/OrderCategories/Screens/Orders.dart';
 import 'package:zara/features/OrderCategories/widget/list_tab.dart';
 
 class TabeCategoriesBady extends StatelessWidget {
-  const TabeCategoriesBady({
-    super.key,
-  });
+  const TabeCategoriesBady({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class TabeCategoriesBady extends StatelessWidget {
         backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20),
-    
+
           child: Column(
             children: [
               SizedBox(height: 40),
@@ -32,7 +32,7 @@ class TabeCategoriesBady extends StatelessWidget {
                     },
                     icon: Icon(Icons.arrow_back_ios_new),
                   ),
-    
+
                   Text(
                     "order",
                     style: TextStyles.subtitle.copyWith(
@@ -44,7 +44,7 @@ class TabeCategoriesBady extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 40),
-    
+
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                 child: ButtonsTabBar(
@@ -52,7 +52,7 @@ class TabeCategoriesBady extends StatelessWidget {
                   contentPadding: EdgeInsets.symmetric(horizontal: 20),
                   backgroundColor: AppColors.primary,
                   unselectedBackgroundColor: AppColors.graycolor,
-    
+
                   radius: 100,
                   labelStyle: TextStyle(
                     color: Colors.white,
@@ -71,15 +71,15 @@ class TabeCategoriesBady extends StatelessWidget {
                   ],
                 ),
               ),
-    
+
               Expanded(
                 child: TabBarView(
                   children: [
-                    listTab(selectedStatus: "Processing"),
-                    listTab(selectedStatus: "Shipped"),
-                    listTab(selectedStatus: "Delivered"),
-                    listTab(selectedStatus: "Returned"),
-                    listTab(selectedStatus: "Cancelled"),
+                    ListTab(selectedStatus: "Processing"),
+                    ListTab(selectedStatus: "Shipped"),
+                    ListTab(selectedStatus: "Delivered"),
+                    ListTab(selectedStatus: "Returned"),
+                    ListTab(selectedStatus: "Cancelled"),
                   ],
                 ),
               ),

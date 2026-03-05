@@ -1,4 +1,5 @@
-import 'dart:math';
+
+// ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
 import 'package:zara/core/constants/app_image.dart';
@@ -32,29 +33,27 @@ class Orders extends StatelessWidget {
                 ),
                 SizedBox(height: 200),
                 Expanded(
-                  child: Container(
-                    child: Column(
-                      children: [
-                        Image.asset(AppImages.checkOut),
-                        SizedBox(height: 20),
-                        Text(
-                          "No Orders yet",
-                          style: TextStyles.subtitle.copyWith(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
+                  child: Column(
+                    children: [
+                      Image.asset(AppImages.checkOut),
+                      SizedBox(height: 20),
+                      Text(
+                        "No Orders yet",
+                        style: TextStyles.subtitle.copyWith(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
                         ),
-                        SizedBox(height: 20),
-                        MainButton(
-                          width: 50,
-                          height: 50,
-                          text: "Explore Categories",
-                          onpress: () {
-                            pushTo(context, TabeCategoriesViwe());
-                          },
-                        ),
-                      ],
-                    ),
+                      ),
+                      SizedBox(height: 20),
+                      MainButton(
+                        width: 50,
+                        height: 50,
+                        text: "Explore Categories",
+                        onpress: () {
+                          pushTo(context, TabeCategoriesViwe());
+                        },
+                      ),
+                    ],
                   ),
                 ),
               ],

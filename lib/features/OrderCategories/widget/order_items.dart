@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:zara/core/constants/app_image.dart';
-import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/styles/text_style.dart';
-import 'package:zara/features/OrderCategories/Screens/Status_order_Viwe.dart';
-import 'package:zara/features/OrderCategories/date/orders_data.dart';
+
 import 'package:zara/features/order_status/orders_data.dart';
 
 class OrderItems extends StatelessWidget {

@@ -25,7 +25,7 @@ class SearchCategoriesScreen extends StatelessWidget {
                 padding: EdgeInsets.zero,
                 constraints: BoxConstraints(),
                 onPressed: () {
-                  pushTo(context, MainAppScreen());
+                  pushTo(context, MainAppScreen(isMenSelected: true));
                 },
                 icon: CustomCircularContainer(
                   image: AppImages.arrowBack,

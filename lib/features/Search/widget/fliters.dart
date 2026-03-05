@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:zara/core/constants/app_image.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/styles/text_style.dart';
-import 'package:zara/core/widgets/custom_text_form.dart';
 
 class Fliters extends StatelessWidget {
   const Fliters({

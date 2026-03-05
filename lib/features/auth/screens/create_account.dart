@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zara/core/constants/app_image.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/functions/validation.dart';
 import 'package:zara/core/styles/color.dart';
@@ -41,13 +42,7 @@ class _CreateAccountState extends State<CreateAccount> {
                 color: Colors.grey.shade200,
                 shape: BoxShape.circle,
               ),
-              child: Center(
-                child: Image.asset(
-                  'assets/icons/arrow_back.png',
-                  width: 20,
-                  height: 20,
-                ),
-              ),
+              child: Center(child: Image.asset(AppImages.arrowBack)),
             ),
           ),
         ),

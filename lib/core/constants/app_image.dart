@@ -8,7 +8,7 @@ abstract class AppImages {
   static const String checkout = 'assets/images/check-out.png';
   static const String hoodies = 'assets/images/Hoodies.png';
   static const String orderPlaced = 'assets/images/Order_Placed.png';
-  static const String blackManTraining = 'assets/images/BlackManTraining.png';
+  static const String blackManTraining = 'assets/images/blackManTraining.png';
   static const String blackHoodies = 'assets/images/blackHoodies.png';
   static const String greenTraining = 'assets/images/greenTraining.png';
   static const String oilJacket = 'assets/images/oilJacket.png';
@@ -41,5 +41,5 @@ abstract class AppImages {
   static const String bagIcon = 'assets/icons/bagIcon.png';
   static const String checkOut = 'assets/images/check-out.png';
   static const String processingSvg = "assets/icons/order.svg";
-
+  static const String user = 'assets/images/user.png';
 }
