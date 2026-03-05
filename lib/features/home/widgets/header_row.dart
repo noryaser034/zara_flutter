@@ -26,7 +26,7 @@ class HeaderRow extends StatelessWidget {
           selectedValue: selectedValue,
           onChanged: onChanged,
           items: ['men', 'women'],
-          hint: 'men',
+          hint: '',
         ),
         InkWell(
           onTap: () {},

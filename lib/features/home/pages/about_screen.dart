@@ -72,7 +72,7 @@ class _AboutScreenState extends State<AboutScreen> {
         child: MainButton(
           text: 'Finish',
           onpress: () {
-            pushTo(context, MainAppScreen());
+            pushTo(context, MainAppScreen(isMenSelected: true));
           },
         ),
       ),

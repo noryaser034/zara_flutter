@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:zara/core/constants/app_image.dart';
+import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/widgets/custom_text_form.dart';
+import 'package:zara/features/Search/Search.dart';
 import 'package:zara/features/home/widgets/best_selling_builder.dart';
 import 'package:zara/features/home/widgets/categories.dart';
-
 import 'package:zara/features/home/widgets/header_row.dart';
 import 'package:zara/features/home/widgets/new_in_builder.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  final String initialGender;
+  const HomeScreen({super.key, this.initialGender = 'men'});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -16,6 +18,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   String? selectedValue;
+  @override
+  void initState() {
+    super.initState();
+    selectedValue = widget.initialGender;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,6 +47,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   readOnly: true,
                   hintText: 'Search',
                   prefixIcon: Image.asset(AppImages.search),
+                  onTap: () {
+                    pushReplacement(context, Search());
+                  },
                 ),
                 SizedBox(height: 24),
                 Categories(),
