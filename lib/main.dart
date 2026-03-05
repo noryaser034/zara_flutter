@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zara/features/intro/splash.dart';
+import 'package:zara/features/main/main_app_screen.dart';
 
 void main() {
   runApp(ZaraApp());

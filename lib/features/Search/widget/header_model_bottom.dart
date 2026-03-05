@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/text_style.dart';
+import 'package:zara/features/home/pages/home_screen.dart';
 
 class HeaderModelBottom extends StatelessWidget {
   const HeaderModelBottom({super.key, required this.titel});
@@ -11,7 +13,12 @@ class HeaderModelBottom extends StatelessWidget {
       children: [
         Text("Clear", style: TextStyles.subtitle),
         Text(titel, style: TextStyles.title),
-        IconButton(onPressed: () {}, icon: Icon(Icons.close)),
+        IconButton(
+          onPressed: () {
+            popTo(context, HomeScreen());
+          },
+          icon: Icon(Icons.close),
+        ),
       ],
     );
   }

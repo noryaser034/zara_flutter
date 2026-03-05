@@ -25,8 +25,9 @@ class Search extends StatefulWidget {
 class _SearchState extends State<Search> {
   final focusNode = FocusNode();
   String searchKay = "";
-  bool ispressed = true;
-
+  String ispressedONSale = "On Sale";
+  String ispressedSortBy = "Recommended";
+  String ispressedMan = "Men";
   @override
   void initState() {
     super.initState();
@@ -72,34 +73,41 @@ class _SearchState extends State<Search> {
                     backgroundColor: Colors.white,
                     context: context,
                     builder: (Context) {
-                      return Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Column(
-                          children: [
-                            HeaderModelBottom(titel: "Deals"),
-                            SizedBox(height: 25),
-                            ChoosBotton(
-                              isPressed: ispressed,
-                              choose: "On Sale",
-                              onTap: () {
-                                setState(() {
-                                  ispressed = true;
-                                });
-                              },
+                      return StatefulBuilder(
+                        builder: (context, setModalState) {
+                          return Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Column(
+                              children: [
+                                HeaderModelBottom(titel: "Deals"),
+                                SizedBox(height: 25),
+                                ChoosBotton(
+                                  isPressed: ispressedONSale == "On Sale",
+                                  choose: "On Sale",
+                                  onTap: () {
+                                    setModalState(() {
+                                      ispressedONSale = "On Sale";
+                                    });
+                                  },
+                                ),
+                                SizedBox(height: 25),
+                                ChoosBotton(
+                                  isPressed:
+                                      ispressedONSale ==
+                                      "Free Shipping Eligible",
+                                  choose: "Free Shipping Eligible",
+                                  onTap: () {
+                                    setModalState(() {
+                                      ispressedONSale =
+                                          "Free Shipping Eligible";
+                                    });
+                                  },
+                                ),
+                                SizedBox(height: 25),
+                              ],
                             ),
-                            SizedBox(height: 25),
-                            ChoosBotton(
-                              isPressed: !ispressed,
-                              choose: "Free Shipping Eligible",
-                              onTap: () {
-                                setState(() {
-                                  ispressed = false;
-                                });
-                              },
-                            ),
-                            SizedBox(height: 25),
-                          ],
-                        ),
+                          );
+                        },
                       );
                     },
                   );
@@ -119,18 +127,7 @@ class _SearchState extends State<Search> {
                         padding: const EdgeInsets.all(20),
                         child: Column(
                           children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text("Clear", style: TextStyles.subtitle),
-                                Text("price", style: TextStyles.title),
-                                IconButton(
-                                  onPressed: () {},
-                                  icon: Icon(Icons.close),
-                                ),
-                              ],
-                            ),
-
+                            HeaderModelBottom(titel: "Price"),
                             SizedBox(height: 25),
                             CustomTextFormField(hintText: "Min"),
                             SizedBox(height: 25),
@@ -155,54 +152,64 @@ class _SearchState extends State<Search> {
                     backgroundColor: Colors.white,
                     context: context,
                     builder: (Context) {
-                      return Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Column(
-                          children: [
-                            HeaderModelBottom(titel: "Sort By"),
-                            SizedBox(height: 25),
-                            ChoosBotton(
-                              isPressed: ispressed,
-                              choose: "Recommended",
-                              onTap: () {
-                                setState(() {
-                                  ispressed = true;
-                                });
-                              },
+                      return StatefulBuilder(
+                        builder: (context, setModalState) {
+                          return Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Column(
+                              children: [
+                                HeaderModelBottom(titel: "Sort By"),
+                                SizedBox(height: 25),
+                                ChoosBotton(
+                                  isPressed: ispressedSortBy == "Recommended",
+                                  choose: "Recommended",
+                                  onTap: () {
+                                    setModalState(() {
+                                      ispressedSortBy = "Recommended";
+                                    });
+                                  },
+                                ),
+                                SizedBox(height: 25),
+                                ChoosBotton(
+                                  isPressed: ispressedSortBy == "Newest",
+                                  choose: "Newest",
+                                  onTap: () {
+                                    setModalState(() {
+                                      ispressedSortBy = "Newest";
+                                    });
+                                  },
+                                ),
+                                SizedBox(height: 25),
+                                ChoosBotton(
+                                  isPressed:
+                                      ispressedSortBy ==
+                                      "Lowest - Highest Price",
+                                  choose: "Lowest - Highest Price",
+                                  onTap: () {
+                                    setModalState(() {
+                                      ispressedSortBy =
+                                          "Lowest - Highest Price";
+                                    });
+                                  },
+                                ),
+                                SizedBox(height: 25),
+                                ChoosBotton(
+                                  isPressed:
+                                      ispressedSortBy ==
+                                      "Highest - Lowest Price",
+                                  choose: "Highest - Lowest Price",
+                                  onTap: () {
+                                    setModalState(() {
+                                      ispressedSortBy =
+                                          "Highest - Lowest Price";
+                                    });
+                                  },
+                                ),
+                                SizedBox(height: 25),
+                              ],
                             ),
-                            SizedBox(height: 25),
-                            ChoosBotton(
-                              isPressed: !ispressed,
-                              choose: "Newest",
-                              onTap: () {
-                                setState(() {
-                                  ispressed = false;
-                                });
-                              },
-                            ),
-                            SizedBox(height: 25),
-                            ChoosBotton(
-                              isPressed: !ispressed,
-                              choose: "Lowest - Highest Price",
-                              onTap: () {
-                                setState(() {
-                                  ispressed = false;
-                                });
-                              },
-                            ),
-                            SizedBox(height: 25),
-                            ChoosBotton(
-                              isPressed: !ispressed,
-                              choose: "Highest - Lowest Price",
-                              onTap: () {
-                                setState(() {
-                                  ispressed = false;
-                                });
-                              },
-                            ),
-                            SizedBox(height: 25),
-                          ],
-                        ),
+                          );
+                        },
                       );
                     },
                   );
@@ -218,43 +225,47 @@ class _SearchState extends State<Search> {
                     backgroundColor: Colors.white,
                     context: context,
                     builder: (Context) {
-                      return Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Column(
-                          children: [
-                            HeaderModelBottom(titel: "Gender"),
-                            SizedBox(height: 25),
-                            ChoosBotton(
-                              isPressed: ispressed,
-                              choose: "Men",
-                              onTap: () {
-                                setState(() {
-                                  ispressed = true;
-                                });
-                              },
+                      return StatefulBuilder(
+                        builder: (context, setModalState) {
+                          return Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Column(
+                              children: [
+                                HeaderModelBottom(titel: "Gender"),
+                                SizedBox(height: 25),
+                                ChoosBotton(
+                                  isPressed: ispressedMan == "Men",
+                                  choose: "Men",
+                                  onTap: () {
+                                    setModalState(() {
+                                      ispressedMan = "Men";
+                                    });
+                                  },
+                                ),
+                                SizedBox(height: 25),
+                                ChoosBotton(
+                                  isPressed: ispressedMan == "Wemen",
+                                  choose: "Wemen",
+                                  onTap: () {
+                                    setModalState(() {
+                                      ispressedMan = "Wemen";
+                                    });
+                                  },
+                                ),
+                                SizedBox(height: 25),
+                                ChoosBotton(
+                                  isPressed: ispressedMan == "Kids",
+                                  choose: "Kids",
+                                  onTap: () {
+                                    setModalState(() {
+                                      ispressedMan = "Kids";
+                                    });
+                                  },
+                                ),
+                              ],
                             ),
-                            SizedBox(height: 25),
-                            ChoosBotton(
-                              isPressed: !ispressed,
-                              choose: "Wemen",
-                              onTap: () {
-                                setState(() {
-                                  ispressed = false;
-                                });
-                              },
-                            ),
-                            SizedBox(height: 25),
-                            ChoosBotton(
-                              isPressed: !ispressed,
-                              choose: "Kids",
-                              onTap: () {
-                                setState(() {
-                                  ispressed = false;
-                                });
-                              },
-                            ),
-                          ],
-                        ),
+                          );
+                        },
                       );
                     },
                   );
@@ -264,8 +275,14 @@ class _SearchState extends State<Search> {
           ),
           SizedBox(height: 20),
           Align(
-            alignment: AlignmentGeometry.centerLeft,
-            child: Text("53 Results Found"),
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Text(
+                "${getlength(searchKay)} Results Found",
+                style: TextStyles.body,
+              ),
+            ),
           ),
           Expanded(
             child: FliterProductByName(products: getProductsByName(searchKay)),
@@ -284,4 +301,14 @@ List<ProductModel> getProductsByName(String searchKay) {
     }
   }
   return filterProducts;
+}
+
+int getlength(String searchKay) {
+  List<ProductModel> filterProductslens = [];
+  for (var product in allProducts) {
+    if (product.name.toLowerCase().contains(searchKay)) {
+      filterProductslens.add(product);
+    }
+  }
+  return filterProductslens.length;
 }

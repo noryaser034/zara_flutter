@@ -4,13 +4,29 @@ import 'package:zara/core/constants/app_image.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/styles/text_style.dart';
-import 'package:zara/features/OrderCategories/Screens/open_order.dart';
+import 'package:zara/features/OrderCategories/Screens/Status_order_Viwe.dart';
 import 'package:zara/features/OrderCategories/date/orders_data.dart';
+import 'package:zara/features/home/data/product_model.dart';
+import 'package:zara/features/order_status/orders_data.dart';
 
-class OrderContiner extends StatelessWidget {
-  const OrderContiner({super.key, required this.model});
+class OrderContiner extends StatefulWidget {
+  const OrderContiner({super.key, required this.index, required this.modal});
 
-  final OrdersModel model;
+  final OrdersModel modal;
+  final int index;
+
+  @override
+  State<OrderContiner> createState() => _OrderContinerState();
+}
+
+class _OrderContinerState extends State<OrderContiner> {
+  String selectedStatus = 'Processing';
+
+  List<OrdersModel> get filterList {
+    return orderStatus.where((order) {
+      return order.status == selectedStatus;
+    }).toList();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +53,7 @@ class OrderContiner extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  model.NumberOrder,
+                  ("Order ${filterList[widget.index].orderNo.toString()}"),
                   style: TextStyles.body.copyWith(
                     color: AppColors.blackcolor,
                     fontWeight: FontWeight.w800,
@@ -45,7 +61,7 @@ class OrderContiner extends StatelessWidget {
                 ),
                 SizedBox(height: 5),
                 Text(
-                  model.NumberItem,
+                  ("${filterList[widget.index].noItems.toString()} Items"),
                   style: TextStyles.caption1.copyWith(
                     color: AppColors.textorder,
                   ),
@@ -55,7 +71,7 @@ class OrderContiner extends StatelessWidget {
             SizedBox(width: 70),
             IconButton(
               onPressed: () {
-                pushTo(context, OpenOrder(model: model,));
+                pushTo(context, StatusOrder(model: widget.modal));
               },
               icon: Icon(Icons.arrow_forward_ios),
             ),

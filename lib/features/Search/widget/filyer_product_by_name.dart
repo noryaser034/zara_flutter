@@ -14,7 +14,7 @@ class FliterProductByName extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 10,
-        mainAxisSpacing: 0,
+        mainAxisSpacing: 20,
         mainAxisExtent: 250,
       ),
       itemBuilder: (context, index) {

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:zara/core/constants/app_image.dart';
+import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/widgets/custom_text_form.dart';
+import 'package:zara/features/Search/Search.dart';
 import 'package:zara/features/home/widgets/best_selling_builder.dart';
 import 'package:zara/features/home/widgets/categories.dart';
 
@@ -35,10 +37,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 ),
                 SizedBox(height: 24),
-                CustomTextFormField(
-                  readOnly: true,
-                  hintText: 'Search',
-                  prefixIcon: Image.asset(AppImages.search),
+                Hero(
+                  tag: "search",
+                  child: Material(
+                    child: CustomTextFormField(
+                      readOnly: true,
+                      hintText: 'Search',
+                      prefixIcon: Image.asset(AppImages.search),
+                      onTap: () {
+                        pushTo(context, Search());
+                      },
+                    ),
+                  ),
                 ),
                 SizedBox(height: 24),
                 Categories(),

@@ -5,7 +5,7 @@ import 'package:zara/core/constants/app_image.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/text_style.dart';
 import 'package:zara/core/widgets/main_button.dart';
-import 'package:zara/features/OrderCategories/Screens/Explore_Categories.dart';
+import 'package:zara/features/OrderCategories/Tabe_Orders/Tabe_Categories_Viwe.dart';
 
 class Orders extends StatelessWidget {
   const Orders({super.key});
@@ -50,7 +50,7 @@ class Orders extends StatelessWidget {
                           height: 50,
                           text: "Explore Categories",
                           onpress: () {
-                            pushTo(context, ExploreCategories());
+                            pushTo(context, TabeCategoriesViwe());
                           },
                         ),
                       ],

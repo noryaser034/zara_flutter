@@ -4,8 +4,9 @@ import 'package:zara/core/constants/app_image.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/styles/text_style.dart';
-import 'package:zara/features/OrderCategories/Screens/open_order.dart';
+import 'package:zara/features/OrderCategories/Screens/Status_order_Viwe.dart';
 import 'package:zara/features/OrderCategories/date/orders_data.dart';
+import 'package:zara/features/order_status/orders_data.dart';
 
 class OrderItems extends StatelessWidget {
   const OrderItems({super.key, required this.model});
@@ -34,7 +35,7 @@ class OrderItems extends StatelessWidget {
             //SizedBox(width: 20),
             SizedBox(height: 5),
             Text(
-              model.NumberItem,
+              " ${model.noItems.toString()} Items ",
               style: TextStyles.caption1.copyWith(
                 color: AppColors.blackcolor,
                 fontSize: 20,

@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
 
-
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/styles/text_style.dart';
-import 'package:zara/features/OrderCategories/Screens/Explore_Categories.dart';
+import 'package:zara/features/OrderCategories/Tabe_Orders/Tabe_Categories_Viwe.dart';
 import 'package:zara/features/OrderCategories/date/orders_data.dart';
-import 'package:zara/features/OrderCategories/widget/order_continer.dart';
 import 'package:zara/features/OrderCategories/widget/order_items.dart';
 import 'package:zara/features/OrderCategories/widget/states_order.dart';
+import 'package:zara/features/order_status/orders_data.dart';
 
-class OpenOrder extends StatelessWidget {
-  const OpenOrder({super.key, required this.model});
+class StatusOrder extends StatelessWidget {
+  const StatusOrder({super.key, required this.model});
   final OrdersModel model;
+
+  // List<OrdersModel> get getOpenOrder {
+  //   return orderStatus
+  //       .where((numberOrder) => numberOrder.orderNo == model.orderNo)
+  //       .toList();
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,12 +28,12 @@ class OpenOrder extends StatelessWidget {
 
         leading: GestureDetector(
           onTap: () {
-            popTo(context, ExploreCategories());
+            popTo(context, TabeCategoriesViwe());
           },
           child: Icon(Icons.arrow_back_ios_new),
         ),
 
-        title: Text(model.NumberOrder, style: TextStyles.subtitle),
+        title: Text(model.orderNo.toString(), style: TextStyles.subtitle),
         centerTitle: true,
       ),
       body: Padding(

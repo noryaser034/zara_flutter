@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class OrdersModel {
-  OrdersModel({
+class aOrdersModel {
+  aOrdersModel({
     
   required this.NumberOrder, required this.NumberItem, required this.tageKey});
 
@@ -11,20 +11,21 @@ class OrdersModel {
 
 }
 
-List<OrdersModel> openorders = [
-  OrdersModel(
+List<aOrdersModel> openorders = [
+  aOrdersModel(
     tageKey: UniqueKey().toString(),
     NumberOrder: "Order  #456765",
     NumberItem: "4 items",
+
    ),
 
-  OrdersModel(
+  aOrdersModel(
     tageKey: UniqueKey().toString(),
     NumberOrder: "Order  #454569",
     NumberItem: "2 items",
   ),
 
-  OrdersModel(
+  aOrdersModel(
     tageKey: UniqueKey().toString(),
     NumberOrder: "Order  #454809",
     NumberItem: "1 items",
