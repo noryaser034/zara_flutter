@@ -10,5 +10,9 @@ class AppTheme {
       showUnselectedLabels: false,
     ),
     scaffoldBackgroundColor: AppColors.background,
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.background,
+      elevation: 0,
+    ),
   );
 }
