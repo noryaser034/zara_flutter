@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:zara/core/constants/app_image.dart';
+import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/widgets/custom_circular_container.dart';
 import 'package:zara/core/widgets/drop_down_container.dart';
+import 'package:zara/features/cart/cart_view.dart';
 
 class HeaderRow extends StatelessWidget {
   const HeaderRow({
@@ -29,7 +31,9 @@ class HeaderRow extends StatelessWidget {
           hint: '',
         ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            pushTo(context, CartView());
+          },
           child: CustomCircularContainer(
             image: AppImages.bagIcon,
             width: 40,

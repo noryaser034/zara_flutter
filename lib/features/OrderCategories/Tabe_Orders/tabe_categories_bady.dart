@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/styles/text_style.dart';
-import 'package:zara/features/OrderCategories/Screens/Orders.dart';
 import 'package:zara/features/OrderCategories/widget/list_tab.dart';
+import 'package:zara/features/main/main_app_screen.dart';
 
 class TabeCategoriesBady extends StatelessWidget {
   const TabeCategoriesBady({super.key});
@@ -28,7 +28,7 @@ class TabeCategoriesBady extends StatelessWidget {
                 children: [
                   IconButton(
                     onPressed: () {
-                      popTo(context, Orders());
+                      pushTo(context, MainAppScreen(isMenSelected: false));
                     },
                     icon: Icon(Icons.arrow_back_ios_new),
                   ),

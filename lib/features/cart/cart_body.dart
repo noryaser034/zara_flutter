@@ -34,68 +34,69 @@ class CartBody extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         margin: EdgeInsets.all(15),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(
-              width: double.infinity,
-              height: 300,
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Container(
-                      width: double.infinity,
-
-                      alignment: Alignment.topRight,
-                      child: Text(
-                        "Remove All",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SizedBox(
+                width: double.infinity,
+                height: 300,
+                child: SingleChildScrollView(
+                  child: Expanded(
+                    child: Column(
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          alignment: Alignment.topRight,
+                          child: Text(
+                            "Remove All",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ),
                         ),
-                      ),
+                        CustomCard(
+                          image: Image.asset('assets/images/oilJacket.png'),
+                          title: "Men's Harrington Jacket",
+                          price: 90.0,
+                          size: "Size: M",
+                          color: "Color: Lemon",
+                        ),
+                        SizedBox(height: 8),
+                        CustomCard(
+                          image: Image.asset('assets/images/blackHoodies.png'),
+                          title: "Black Hoodies",
+                          price: 85.0,
+                          size: "Size: M",
+                          color: "Color: Black",
+                        ),
+                        SizedBox(height: 8),
+                        CustomCard(
+                          image: Image.asset('assets/images/skateJacket.png'),
+                          title: "Skate Jacket",
+                          price: 32.0,
+                          size: "Size: S",
+                          color: "Color: Lemon",
+                        ),
+                        SizedBox(height: 8),
+                        CustomCard(
+                          image: Image.asset('assets/images/PumbJacket.png'),
+                          title: "Pumb Jacket",
+                          price: 148.0,
+                          size: "Size: M",
+                          color: "Color: Black",
+                        ),
+                        SizedBox(height: 8),
+                      ],
                     ),
-                    CustomCard(
-                      image: Image.asset('assets/images/oilJacket.png'),
-                      title: "Men's Harrington Jacket",
-                      price: 90.0,
-                      size: "Size: M",
-                      color: "Color: Lemon",
-                    ),
-                    SizedBox(height: 8),
-                    CustomCard(
-                      image: Image.asset('assets/images/blackHoodies.png'),
-                      title: "Black Hoodies",
-                      price: 85.0,
-                      size: "Size: M",
-                      color: "Color: Black",
-                    ),
-                    SizedBox(height: 8),
-                    CustomCard(
-                      image: Image.asset('assets/images/skateJacket.png'),
-                      title: "Skate Jacket",
-                      price: 32.0,
-                      size: "Size: S",
-                      color: "Color: Lemon",
-                    ),
-                    SizedBox(height: 8),
-                    CustomCard(
-                      image: Image.asset('assets/images/PumbJacket.png'),
-                      title: "Pumb Jacket",
-                      price: 148.0,
-                      size: "Size: M",
-                      color: "Color: Black",
-                    ),
-                    SizedBox(height: 8),
-                  ],
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              width: double.infinity,
-              height: 300,
-              child: SingleChildScrollView(
+              SizedBox(
+                width: double.infinity,
+                height: 300,
                 child: Column(
                   children: [
                     Column(
@@ -164,20 +165,22 @@ class CartBody extends StatelessWidget {
                             ),
                           ),
                         ),
-
-                        MainButton(
-                          text: "Checkout",
-                          onpress: () {
-                            pushTo(context, CheckOutView());
-                          },
-                        ),
                       ],
                     ),
                   ],
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        padding: EdgeInsets.all(15),
+        child: MainButton(
+          text: "Checkout",
+          onpress: () {
+            pushReplacement(context, CheckOutView());
+          },
         ),
       ),
     );

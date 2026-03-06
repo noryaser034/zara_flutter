@@ -3,7 +3,7 @@ import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/features/cart/cart_view.dart';
 import 'package:zara/features/home/data/product_model.dart';
-import 'package:zara/features/home/pages/home_screen.dart';
+import 'package:zara/features/main/main_app_screen.dart';
 import 'package:zara/features/product/widget/product_image_slider.dart';
 import 'package:zara/features/product/widget/review_section.dart';
 import 'package:zara/features/product/widget/selection_widgets.dart';
@@ -94,7 +94,7 @@ class _ProductState extends State<Productdetails> {
           backgroundColor: Color(0xffF4F4F4),
           child: Icon(Icons.arrow_back_ios_new, size: 18, color: Colors.black),
         ),
-        onPressed: () => pushReplacement(context, const HomeScreen()),
+        onPressed: () => pushReplacement(context, MainAppScreen()),
       ),
       actions: [
         IconButton(
