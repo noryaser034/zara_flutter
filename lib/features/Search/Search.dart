@@ -65,7 +65,7 @@ class _SearchState extends State<Search> {
             ),
           ),
         ),
-        actions: [SizedBox(width: 1)],
+        actions: [SizedBox(width: 10)],
       ),
       body: Column(
         children: [

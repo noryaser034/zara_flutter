@@ -24,6 +24,7 @@ class HeaderRow extends StatelessWidget {
           backgroundImage: AssetImage(AppImages.circleImage),
         ),
         DropDownContainer(
+          width: 105,
           selectedValue: selectedValue,
           onChanged: onChanged,
           items: ['men', 'women'],
@@ -31,7 +32,7 @@ class HeaderRow extends StatelessWidget {
         ),
         InkWell(
           onTap: () {
-            pushReplacement(context, CartScreen());
+            pushTo(context, CartScreen());
           },
           child: CustomCircularContainer(
             image: AppImages.bagIcon,

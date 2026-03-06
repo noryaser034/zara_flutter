@@ -8,6 +8,7 @@ import 'package:zara/core/widgets/custom_text_form.dart';
 import 'package:zara/core/widgets/main_button.dart';
 import 'package:zara/features/auth/screens/forgot_password.dart';
 import 'package:zara/features/auth/screens/sign_in_email.dart';
+import 'package:zara/features/auth/screens/sign_in_password.dart';
 import 'package:zara/features/auth/widgets/password_text_form_filed.dart';
 
 class CreateAccount extends StatefulWidget {
@@ -32,7 +33,9 @@ class _CreateAccountState extends State<CreateAccount> {
           padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
             onTap: () {
-              pushReplacement(context, const Signin());
+              setState(() {
+                pushReplacement(context, Signin());
+              });
             },
             child: Container(
               decoration: BoxDecoration(
@@ -113,7 +116,7 @@ class _CreateAccountState extends State<CreateAccount> {
                     onpress: () {
                       if (_formKey.currentState!.validate()) {
                         setState(() {
-                          pushReplacement(context, Signin());
+                          pushReplacement(context, Signinpassword());
                         });
                       }
                     },
