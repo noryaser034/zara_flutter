@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/widgets/main_button.dart';
-import 'package:zara/features/caaart/data/cart_model.dart';
-import 'package:zara/features/cart/cart_view.dart';
+import 'package:zara/features/cart/data/cart_model.dart';
+import 'package:zara/features/cart/page/cart_screen.dart';
 import 'package:zara/features/place_order/place_order_view.dart';
 
 class CheckOutBody extends StatelessWidget {
@@ -27,7 +27,7 @@ class CheckOutBody extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            popTo(context, CartView());
+            popTo(context, CartScreen());
           },
           icon: Icon(Icons.arrow_back_ios_new_outlined),
         ),

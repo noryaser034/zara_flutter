@@ -3,7 +3,7 @@ import 'package:zara/core/constants/app_image.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/widgets/custom_circular_container.dart';
 import 'package:zara/core/widgets/drop_down_container.dart';
-import 'package:zara/features/caaart/page/cart_screen.dart';
+import 'package:zara/features/cart/page/cart_screen.dart';
 
 class HeaderRow extends StatelessWidget {
   const HeaderRow({

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zara/core/constants/app_image.dart';
 import 'package:zara/core/widgets/custom_text_form.dart';
-import 'package:zara/features/caaart/widgets/pricing_tile.dart';
+import 'package:zara/features/cart/widgets/pricing_tile.dart';
 
 class PriceDetailes extends StatelessWidget {
   const PriceDetailes({super.key, required this.subtotal, required this.total});

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/styles/text_style.dart';
-import 'package:zara/features/caaart/data/cart_model.dart';
-import 'package:zara/features/caaart/widgets/cart_header.dart';
-import 'package:zara/features/caaart/widgets/cart_item_card.dart';
-import 'package:zara/features/caaart/widgets/price_detailes.dart';
+import 'package:zara/features/cart/data/cart_model.dart';
+import 'package:zara/features/cart/widgets/cart_header.dart';
+import 'package:zara/features/cart/widgets/cart_item_card.dart';
+import 'package:zara/features/cart/widgets/price_detailes.dart';
 import 'package:zara/features/check_out/check_out_view.dart';
 import 'package:zara/features/main/main_app_screen.dart';
 
