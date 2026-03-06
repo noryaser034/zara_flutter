@@ -29,7 +29,8 @@ abstract class AppImages {
   static const String arrowBack = 'assets/icons/arrow_back.png';
   static const String arrowDown = 'assets/icons/arrowdown.png';
   static const String arrowRight = 'assets/icons/arrowright2.png';
-  static const String discountShape = 'assets/icons/discountShape.png';
+  static const String arrowContainer = 'assets/icons/arrowContainer.png';
+  static const String discountShape = 'assets/icons/discountshape.png';
   static const String favIcon = 'assets/icons/fav-icon.png';
   static const String filter = 'assets/icons/filter.png';
   static const String heart = 'assets/icons/heart.png';

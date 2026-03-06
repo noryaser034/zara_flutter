@@ -3,7 +3,7 @@ import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/widgets/custom_card.dart';
 import 'package:zara/core/widgets/main_button.dart';
-import 'package:zara/features/cart/cart_view.dart';
+import 'package:zara/features/cart/page/cart_screen.dart';
 import 'package:zara/features/check_out/check_out_view.dart';
 
 class CartBody extends StatelessWidget {
@@ -20,7 +20,7 @@ class CartBody extends StatelessWidget {
 
         leading: IconButton(
           onPressed: () {
-            popTo(context, CartView());
+            popTo(context, CartScreen());
           },
           icon: Icon(Icons.arrow_back_ios_new_outlined),
         ),

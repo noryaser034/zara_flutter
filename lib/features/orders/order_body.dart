@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zara/core/constants/app_fonts.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/widgets/second_button.dart';
-import 'package:zara/features/OrderCategories/Tabe_Orders/Tabe_Categories_Viwe.dart';
+import 'package:zara/features/main/main_app_screen.dart';
 
 class OrderBody extends StatelessWidget {
   const OrderBody({super.key});
@@ -42,7 +42,7 @@ class OrderBody extends StatelessWidget {
             SecondButton(
               text: "Explore Categories",
               onpress: () {
-                pushTo(context, TabeCategoriesViwe());
+                pushTo(context, MainAppScreen());
               },
             ),
           ],

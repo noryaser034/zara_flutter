@@ -3,9 +3,6 @@ import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/features/auth/screens/sign_in_email.dart';
 
-
-
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/widgets/main_button.dart';
-import 'package:zara/features/cart/cart_view.dart';
+import 'package:zara/features/cart/data/cart_model.dart';
+import 'package:zara/features/cart/page/cart_screen.dart';
 import 'package:zara/features/place_order/place_order_view.dart';
 
 class CheckOutBody extends StatelessWidget {
@@ -17,11 +18,16 @@ class CheckOutBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final subtotal = cartItems.fold(
+      0.0,
+      (sum, item) => sum + (item.product.price * item.quantity),
+    );
+    final total = subtotal + 8.00;
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            popTo(context, CartView());
+            popTo(context, CartScreen());
           },
           icon: Icon(Icons.arrow_back_ios_new_outlined),
         ),
@@ -85,7 +91,7 @@ class CheckOutBody extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text("Subtotal", style: TextStyle(fontSize: 18)),
-                              Text("\$355", style: TextStyle(fontSize: 22)),
+                              Text('\$${subtotal.toStringAsFixed(2)}'),
                             ],
                           ),
                           Row(
@@ -95,21 +101,21 @@ class CheckOutBody extends StatelessWidget {
                                 "Shipping cost",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text("\$8.0", style: TextStyle(fontSize: 22)),
+                              Text('\$8.00'),
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text("Tax", style: TextStyle(fontSize: 18)),
-                              Text("\$0.0", style: TextStyle(fontSize: 22)),
+                              Text('\$0.00'),
                             ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text("Total", style: TextStyle(fontSize: 18)),
-                              Text("\$363", style: TextStyle(fontSize: 22)),
+                              Text('\$${total.toStringAsFixed(2)}'),
                             ],
                           ),
                           SizedBox(height: 10),
