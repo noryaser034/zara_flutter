@@ -241,9 +241,8 @@ A modern **Flutter E-Commerce application** with a clean UI and smooth shopping 
 
 ---
 
-# 👩‍💻 Developer
-
-Developed by **Nourhan Yaser**
-Developed by **Mohamed Mousaa**
-Developed by **Mohamed Kamel**
+# 👩‍💻 Developers
+Developed by **Nourhan Yaser**<br>
+Developed by **Mohamed Mousaa**<br>
+Developed by **Mohamed Kamel**<br>
 Developed by **Mina Refaat Rasmy**
