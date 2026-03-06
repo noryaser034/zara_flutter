@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:zara/core/constants/app_fonts.dart';
+import 'package:zara/core/constants/app_image.dart';
+import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/widgets/second_button.dart';
+import 'package:zara/features/main/main_app_screen.dart';
 
 class NotificationsBody extends StatelessWidget {
   const NotificationsBody({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         centerTitle: true,
         title: Text(
           "Notifications",
@@ -26,7 +29,7 @@ class NotificationsBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset("assets/images/bell.png"),
+            Image.asset(AppImages.bell),
             SizedBox(height: 20),
             Text(
               "No Notifications Yet",
@@ -37,7 +40,12 @@ class NotificationsBody extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            SecondButton(text: "Explore Categories", onpress: () {}),
+            SecondButton(
+              text: "Explore Categories",
+              onpress: () {
+                pushReplacement(context, MainAppScreen());
+              },
+            ),
           ],
         ),
       ),

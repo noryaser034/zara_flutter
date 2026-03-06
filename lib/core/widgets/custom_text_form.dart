@@ -39,6 +39,7 @@ class CustomTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hintText,
         prefixIcon: prefixIcon,
+        suffixIcon: suffixIcon,
         hintStyle: TextStyles.caption1,
         fillColor: AppColors.graycolor,
         filled: true,

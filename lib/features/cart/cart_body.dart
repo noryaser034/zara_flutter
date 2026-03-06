@@ -3,8 +3,8 @@ import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/widgets/custom_card.dart';
 import 'package:zara/core/widgets/main_button.dart';
-import 'package:zara/features/cart/cart_view.dart';
 import 'package:zara/features/check_out/check_out_view.dart';
+import 'package:zara/features/main/main_app_screen.dart';
 
 class CartBody extends StatelessWidget {
   const CartBody({super.key, this.couponeController});
@@ -20,7 +20,7 @@ class CartBody extends StatelessWidget {
 
         leading: IconButton(
           onPressed: () {
-            popTo(context, CartView());
+            pushReplacement(context, MainAppScreen());
           },
           icon: Icon(Icons.arrow_back_ios_new_outlined),
         ),

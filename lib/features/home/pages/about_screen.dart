@@ -55,6 +55,7 @@ class _AboutScreenState extends State<AboutScreen> {
             ),
             SizedBox(height: 13),
             DropDownContainer(
+              width: double.infinity,
               selectedValue: selectedValue,
               onChanged: (String? value) {
                 setState(() {

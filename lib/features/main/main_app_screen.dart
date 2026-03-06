@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zara/core/constants/app_image.dart';
 import 'package:zara/core/styles/color.dart';
-import 'package:zara/features/cart/cart_view.dart';
+import 'package:zara/features/OrderCategories/Tabe_Orders/tabe_categories_bady.dart';
 import 'package:zara/features/home/pages/home_screen.dart';
 import 'package:zara/features/notifications/notifications_view.dart';
 import 'package:zara/features/profile/profile_view.dart';
@@ -19,7 +19,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
   List<Widget> get screens => [
     HomeScreen(initialGender: widget.isMenSelected ? 'men' : 'women'),
     NotificationsView(),
-    CartView(),
+    TabeCategoriesBady(),
     ProfileView(),
   ];
   @override

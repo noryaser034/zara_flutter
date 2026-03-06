@@ -13,7 +13,7 @@ import 'package:zara/features/Search/widget/fliters.dart';
 import 'package:zara/features/Search/widget/header_model_bottom.dart';
 import 'package:zara/features/Search/widget/on_sale.dart';
 import 'package:zara/features/home/data/product_model.dart';
-import 'package:zara/features/home/pages/home_screen.dart';
+import 'package:zara/features/main/main_app_screen.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});
@@ -41,7 +41,7 @@ class _SearchState extends State<Search> {
         leading: IconButton(
           icon: Image.asset(AppImages.arrowBack),
           onPressed: () {
-            pushReplacement(context, const HomeScreen());
+            pushReplacement(context, const MainAppScreen());
           },
         ),
         titleSpacing: 0,

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:zara/core/constants/app_image.dart';
+import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/widgets/custom_circular_container.dart';
 import 'package:zara/core/widgets/drop_down_container.dart';
+import 'package:zara/features/caaart/page/cart_screen.dart';
 
 class HeaderRow extends StatelessWidget {
   const HeaderRow({
@@ -22,14 +24,15 @@ class HeaderRow extends StatelessWidget {
           backgroundImage: AssetImage(AppImages.circleImage),
         ),
         DropDownContainer(
-          width: 105,
           selectedValue: selectedValue,
           onChanged: onChanged,
           items: ['men', 'women'],
           hint: '',
         ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            pushReplacement(context, CartScreen());
+          },
           child: CustomCircularContainer(
             image: AppImages.bagIcon,
             width: 40,

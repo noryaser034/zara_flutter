@@ -2,15 +2,12 @@
 
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
-import 'package:zara/core/functions/navigation.dart';
 import 'package:zara/core/styles/color.dart';
 import 'package:zara/core/styles/text_style.dart';
-import 'package:zara/features/OrderCategories/Screens/Orders.dart';
 import 'package:zara/features/OrderCategories/widget/list_tab.dart';
 
 class TabeCategoriesBady extends StatelessWidget {
   const TabeCategoriesBady({super.key});
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -23,30 +20,17 @@ class TabeCategoriesBady extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 40),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      popTo(context, Orders());
-                    },
-                    icon: Icon(Icons.arrow_back_ios_new),
-                  ),
-
-                  Text(
-                    "order",
-                    style: TextStyles.subtitle.copyWith(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(width: 20),
-                ],
+              Text(
+                "order",
+                style: TextStyles.subtitle.copyWith(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               SizedBox(height: 40),
 
               Padding(
-                padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: ButtonsTabBar(
                   buttonMargin: EdgeInsets.symmetric(horizontal: 5),
                   contentPadding: EdgeInsets.symmetric(horizontal: 20),

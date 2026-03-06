@@ -31,7 +31,6 @@ class DropDownContainer extends StatelessWidget {
           value: selectedValue,
           icon: Image.asset(AppImages.arrowDown),
           hint: Text(hint),
-          isExpanded: true,
           items: items
               .map((e) => DropdownMenuItem(value: e, child: Text(e)))
               .toList(),
